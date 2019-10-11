@@ -13,7 +13,11 @@ export default class LoginForm extends Component {
     ev.preventDefault()
     const { user_name, password } = ev.target
 
-    tokenService.saveAuthToken(tokenService.makeBasicAuthToken(user_name.value, password.value))
+    tokenService.saveAuthToken(
+      tokenService.makeBasicAuthToken(
+          user_name.value, 
+          password.value)
+    )
 
     user_name.value = ''
     password.value = ''
