@@ -2,7 +2,6 @@ import config from '../config'
 
 const TokenService = {
   saveAuthToken(token) {
-    console.log(token)
     window.localStorage.setItem(config.TOKEN_KEY, token)
   },
   getAuthToken() {
@@ -15,7 +14,6 @@ const TokenService = {
     return !!TokenService.getAuthToken()
   },
   makeBasicAuthToken(userName, password) {
-    console.log(userName, password)
     return window.btoa(`${userName}:${password}`)
   },
 }
